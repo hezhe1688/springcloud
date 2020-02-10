@@ -3,7 +3,9 @@ package com.hezhe.microservicecloud;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+@EnableEurekaClient //开启eureka客户端
 @SpringBootApplication
 @MapperScan("com.hezhe.microservicecloud.mapper")
 /*@EnableEurekaClient //本服务启动后会自动注册进eureka服务中
