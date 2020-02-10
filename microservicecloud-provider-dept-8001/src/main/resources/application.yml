@@ -1,0 +1,36 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatisConfig.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+spring:
+  application:
+    name: microservicecloud-dept
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/clouddb01?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+    # 下面为连接池的补充设置，应用到上面所有数据源中
+    #通过这句配置将druid连接池引入到我们的配置中，spring会尽可能判断类型是什么，然后根据情况去匹配驱动类。
+    #type: com.alibaba.druid.pool.DruidDataSource
+
+
+
+#eureka:
+#  client: #客户端注册进eureka服务列表内
+#    service-url:
+#      #defaultZone: http://localhost:7001/eureka
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+#  instance:
+#    instance-id: microservicecloud-dept8001
+#    prefer-ip-address: true     #访问路径可以显示IP地址
+#
+#info:
+#  app.name: atguigu-microservicecloud
+#  company.name: www.atguigu.com
+#  build.artifactId: $project.artifactId$
+#  build.version: $project.version$
+
