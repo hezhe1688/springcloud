@@ -70,7 +70,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <!-- 注意:这里必须要添加,否者各种依赖有问题 -->
     <repositories>
         <repository>
@@ -82,4 +81,25 @@
             </snapshots>
         </repository>
     </repositories>
+    <!--解决eureka中微服务点击超链接出现错误页面的情况，提升对用户的友好程度-->
+    <build>
+        <finalName>microservicecloud</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
