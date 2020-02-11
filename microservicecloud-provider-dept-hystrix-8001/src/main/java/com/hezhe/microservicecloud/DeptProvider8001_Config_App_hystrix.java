@@ -25,6 +25,10 @@ public class DeptProvider8001_Config_App_hystrix {
         SpringApplication.run(DeptProvider8001_Config_App_hystrix.class, args);
     }
 
+    /**
+     * 豪猪访问设置
+     * @return
+     */
     @Bean
     public ServletRegistrationBean hystrixMetricsStreamServlet() {
         ServletRegistrationBean registration = new ServletRegistrationBean(new HystrixMetricsStreamServlet());
