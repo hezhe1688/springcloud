@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class ConfigBean {
 
     @Bean
-    @LoadBalanced //整合ribbon负债均衡
+    @LoadBalanced //整合ribbon负载均衡
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }

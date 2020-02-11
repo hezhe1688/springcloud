@@ -8,10 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservicecloud-api" />
         <module name="microservicecloud-consumer-dept-80" />
+        <module name="microservicecloud-consumer-hystrix-dashboard" />
         <module name="microservicecloud-eureka-7001" />
         <module name="microservicecloud-provider-dept-8001" />
-        <module name="microservicecloud-provider-dept-8002" />
         <module name="microservicecloud-provider-dept-hystrix-8001" />
+      </profile>
+      <profile name="Annotation profile for microservicecloud" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservicecloud-provider-dept-8002" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
