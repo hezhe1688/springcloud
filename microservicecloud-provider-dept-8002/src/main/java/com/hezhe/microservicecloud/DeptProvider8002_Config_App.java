@@ -18,6 +18,10 @@ public class DeptProvider8002_Config_App {
         SpringApplication.run(DeptProvider8002_Config_App.class, args);
     }
 
+    /**
+     * 仪表盘监控豪猪
+     * @return
+     */
     @Bean
     public ServletRegistrationBean hystrixMetricsStreamServlet() {
         ServletRegistrationBean registration = new ServletRegistrationBean(new HystrixMetricsStreamServlet());
