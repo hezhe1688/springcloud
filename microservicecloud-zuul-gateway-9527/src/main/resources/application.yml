@@ -13,7 +13,6 @@ eureka:
     instance-id: microservicecloud-gateway-9527 #自定义ID
     prefer-ip-address: true
 
-
 zuul:
   #此处添加ignored-services的意义是忽略通过服务名可以访问微服务(添加完成之后不能通过服务名访问微服务)
   #  ignored-services: microservicecloud-dept

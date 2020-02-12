@@ -16,6 +16,7 @@
         <module>microservicecloud-provider-dept-hystrix-8001</module>
         <module>microservicecloud-consumer-hystrix-dashboard</module>
         <module>microservicecloud-zuul-gateway-9527</module>
+        <module>microservicecloud-config-6001</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
